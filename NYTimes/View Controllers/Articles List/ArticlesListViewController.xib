@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArticlesListViewController" customModule="NYTimes" customModuleProvider="target">
+            <connections>
+                <outlet property="offlineModeLabel" destination="1wb-f5-HMy" id="j9c-LK-tLX"/>
+                <outlet property="segmentedControl" destination="EyZ-2Z-E5g" id="3h4-Fq-NsD"/>
+                <outlet property="tableView" destination="YBi-2b-dI5" id="OYN-vZ-0oI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YBi-2b-dI5">
+                    <rect key="frame" x="0.0" y="124" width="414" height="772"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="UZb-y8-1TC"/>
+                        <outlet property="delegate" destination="-1" id="47F-8k-Sb4"/>
+                    </connections>
+                </tableView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EyZ-2Z-E5g">
+                    <rect key="frame" x="16" y="60" width="382" height="49"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="u7e-Ia-lgx"/>
+                    </constraints>
+                    <segments>
+                        <segment title="1 Day Period"/>
+                        <segment title="7 Day Period"/>
+                        <segment title="30 Day Period"/>
+                    </segments>
+                    <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <action selector="segmentedControlValueChanged:" destination="-1" eventType="valueChanged" id="Kt6-QS-VTq"/>
+                    </connections>
+                </segmentedControl>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offline Mode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wb-f5-HMy">
+                    <rect key="frame" x="0.0" y="44" width="414" height="80"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="YBi-2b-dI5" secondAttribute="bottom" id="4fb-WO-hP4"/>
+                <constraint firstItem="1wb-f5-HMy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="FKH-fm-5Ye"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EyZ-2Z-E5g" secondAttribute="trailing" constant="16" id="Rwe-KF-49I"/>
+                <constraint firstItem="1wb-f5-HMy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="TmA-Pl-EhY"/>
+                <constraint firstItem="YBi-2b-dI5" firstAttribute="top" secondItem="EyZ-2Z-E5g" secondAttribute="bottom" constant="16" id="UDJ-el-dkj"/>
+                <constraint firstItem="EyZ-2Z-E5g" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="UlE-ox-yfm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1wb-f5-HMy" secondAttribute="trailing" id="cBU-NU-kEs"/>
+                <constraint firstItem="EyZ-2Z-E5g" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="nhU-x5-7M4"/>
+                <constraint firstItem="YBi-2b-dI5" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="pWL-k3-4mx"/>
+                <constraint firstItem="YBi-2b-dI5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="snE-Kq-cQe"/>
+                <constraint firstItem="YBi-2b-dI5" firstAttribute="top" secondItem="1wb-f5-HMy" secondAttribute="bottom" id="znd-x5-PhB"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </view>
+    </objects>
+</document>

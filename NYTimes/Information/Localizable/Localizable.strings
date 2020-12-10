@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  NYTimes
+
+  Created by Michael Grigoryan on 12/9/20.
+  
+*/
+
+// MARK: - Main
+
+"ny_times" = "NY Times";
+"cancel" = "Cancel";
+"offline_mode" = "Offline mode";
+"something_went_wrong" = "Something went wrong, please try again.";
+
+// MARK: - Articles List
+
+"1_day_period" = "1 Day Period";
+"7_day_period" = "7 Day Period";
+"30_day_period" = "30 Day Period";
+
+// MARK: - Article Details
+
+"want_to_read_more" = "Want to read more? Click here!";
