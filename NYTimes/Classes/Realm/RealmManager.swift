@@ -67,7 +67,7 @@ class RealmManager: NSObject {
             articleData.periodRawValueString = String(realmData.period.rawValue)
             articleData.media?.thumbnailMetadata?.data = realmData.thumbnailData
             articleData.media?.imageMetadata?.data = realmData.imageData
-            realm?.add(articleData)
+            realm?.create(ArticleData.self, value: articleData, update: .all)
         }
     }
     

@@ -66,9 +66,13 @@ class ArticleData: Object, Decodable {
         return ArticlePeriod(rawValue: rawValueInt)
     }
     
+    override class func primaryKey() -> String? {
+        return "identifier"
+    }
+    
     // MARK: - Decodable
     
-    override init() {
+    required init() {
         identifier = 0
     }
     

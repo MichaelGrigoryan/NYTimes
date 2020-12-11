@@ -27,7 +27,7 @@ class ArticleDataMedia: Object, Decodable {
 
     // MARK: - Decodable
     
-    override init() {
+    required init() {
         caption = ""
         copyright = ""
     }
@@ -84,7 +84,7 @@ class ArticleDataMediaMetadata: Object, Decodable {
     
     // MARK: - Decodable
     
-    override init() { }
+    required init() { }
     
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: ArticleDataMediaMetadaCodingKeys.self)
